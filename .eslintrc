@@ -13,14 +13,7 @@
   ],
   "rules": {
     // "no-console": "error",
-    "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": true,
-        "parser": "flow",
-        "endOfLine": "auto"
-      }
-    ],
+    "prettier/prettier": "error",
     "@typescript-eslint/prefer-nullish-coalescing": "error",
     "@typescript-eslint/prefer-optional-chain": "error",
     "@typescript-eslint/no-unnecessary-condition": "error",
