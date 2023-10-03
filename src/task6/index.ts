@@ -3,9 +3,17 @@
 abstract class Figure {
   abstract name: string;
   abstract color: string;
-  public abstract calculateArea(x: number, y: number): number;
+  public abstract calculateArea(): number;
 }
 
+interface IRectangle {
+  name: string;
+  color: string;
+  width: number;
+  height: number;
+  calculateArea(): number;
+  print(): void;
+}
 class Circle extends Figure {
   constructor(
     readonly name: string,
@@ -22,7 +30,7 @@ class Circle extends Figure {
   }
 }
 
-class Rectangle extends Figure {
+class Rectangle extends Figure implements IRectangle {
   constructor(
     readonly name: string,
     readonly color: string,
@@ -45,7 +53,7 @@ class Rectangle extends Figure {
   }
 }
 
-class Square extends Rectangle {
+class Square extends Rectangle implements IRectangle {
   constructor(
     readonly name: string,
     readonly color: string,
